@@ -4,7 +4,8 @@ public class StickerDecorator extends EggDecorator{
     }
 
     @Override
-    public void produce() {
+    public Egg produce() {
         super.produce();
+        return null;
     }
 }

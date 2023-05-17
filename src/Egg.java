@@ -1,3 +1,4 @@
 public interface Egg {
-    void produce();
+    Egg produce();
+
 }

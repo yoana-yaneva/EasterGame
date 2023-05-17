@@ -1,6 +1,8 @@
 public class QuailEgg implements Egg{
     @Override
-    public void produce() {
+    public Egg produce() {
         System.out.println("Quail egg has been produced!");
+        return null;
     }
+
 }

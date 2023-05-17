@@ -1,8 +1,7 @@
 public class EasterBunny {
     private static EasterBunny instance;
 
-    private EasterBunny() {
-    }
+    private EasterBunny() {}
 
     public static EasterBunny getInstance() {
         if (instance == null) {
@@ -11,9 +10,9 @@ public class EasterBunny {
         return instance;
     }
 
-    public void open(String openBy) {
-        System.out.println("The magic bag was opened by " + openBy + "!"+ "\n");
-        System.out.println("Hmm.. What surprise does it have this year??"+ "\n");
+    public void decorateAndAddEgg(Basket basket, Egg egg) {
+        Egg decoratedEgg = egg.produce();
+        basket.addEgg(decoratedEgg);
     }
 
 }

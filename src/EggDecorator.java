@@ -8,9 +8,10 @@ public abstract class EggDecorator implements Egg {
     }
 
     @Override
-    public void produce() {
+    public Egg produce() {
         decoratedEgg.produce();
         applyStickerOrColor();
+        return null;
     }
 
     private void applyStickerOrColor() {

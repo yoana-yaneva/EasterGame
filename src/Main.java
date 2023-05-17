@@ -4,15 +4,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(" ");
         EasterBunny easterBunny = EasterBunny.getInstance();
-        easterBunny.open("Easter Bunny");
 
-        int eggsProduced = 0;
+        Basket basket = new Basket();
+        Chick chick1 = new Chick("Chick1");
+        Chick chick2 = new Chick("Chick2");
+        Chick chick3 = new Chick("Chick3");
+        basket.addObserver(chick1);
+        basket.addObserver(chick2);
+        basket.addObserver(chick3);
 
-        while (eggsProduced < 5) {
-            Egg randomEgg = EggFactory.produceRandomEgg();
-            randomEgg.produce();
-            eggsProduced++;
-            System.out.println("-------------------");
+        for (int i = 0; i < 7; i++) {
+            Egg egg = EggFactory.produceRandomEgg(); // Променете типа на яйцето според нуждите
+            easterBunny.decorateAndAddEgg(basket, egg);
         }
     }
 }

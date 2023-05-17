@@ -6,8 +6,8 @@ class Chick implements Observer {
     }
 
     public void update(int eggCount) {
-        if (eggCount > 5) {
-            System.out.println("[" + name + "] Яйцата са готови!");
+        if (eggCount % 5 == 0) {
+            System.out.println("[" + name + "]: The basket is full!");
         }
     }
 }
